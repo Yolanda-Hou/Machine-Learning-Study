@@ -1,3 +1,5 @@
+# Machine Learning Study
+This is Yolanda's notebook for machine learning study. A practical self-study guidance for machine learning models and how to perform them in R.
 ## Linear regression
 ### What is linear regression
 - A linear regression is a statistical model that analyzes the relationship between a response variable (often called y) and one or more variables and their interactions (often called x or explanatory variables).
