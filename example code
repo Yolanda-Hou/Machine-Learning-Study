@@ -1,3 +1,27 @@
+data(cars)
+head(cars)
+library(ggplot2)
+plot(x=cars$speed,y=cars$dist,main="Dist~Speed")
+scatter.smooth(x=cars$speed,y=cars$dist,main="Dist~Speed")
+# Ordinary least squares to estimate the coefficients
+x_bar<-mean(cars$speed)
+y_bar<-mean(cars$dist)
+sum_xy<-sum((cars$speed-x_bar)*(cars$dist-y_bar))
+sum_x<-sum((cars$speed-x_bar)ˆ2)
+b<-sum_xy/sum_x
+a<-y_bar-b*x_bar
+fit<-lm(dist~speed, data=cars)
+summary(fit)
+names(fit) # find out what other pieces of information are stored in fit
+coef(fit) # extractor the coefficients of the model.
+confint(fit) # obtain a confidence interval for the coefficient estimates.
+# use to produce confidence intervals and prediction intervals for the prediction of dist for a given values of speed
+predict(fit,data.frame(speed=(c(3,6,10,25))),interval = "confidence")
+predict(fit,data.frame(speed=(c(3,6,10,25))),interval = "prediction")
+par(mfrow=c(2,2)) #2*2 grid of panels
+plot(fit)
+
+=======
 library(ISLR)
 data("Smarket")
 dim(Smarket)
