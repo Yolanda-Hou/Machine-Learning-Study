@@ -20,3 +20,18 @@ predict(fit,data.frame(speed=(c(3,6,10,25))),interval = "confidence")
 predict(fit,data.frame(speed=(c(3,6,10,25))),interval = "prediction")
 par(mfrow=c(2,2)) #2*2 grid of panels
 plot(fit)
+
+=======
+library(ISLR)
+data("Smarket")
+dim(Smarket)
+head(Smarket)
+myfit <- glm(Direction ~ Lag1 + Lag2 + Lag3 + Lag4 + Lag5 + Volume, data = Smarket,family = "binomial")
+summary(myfit)
+coef(myfit)
+glm.probs=predict(myfit, type="response")
+head(glm.probs)
+glm.pred<- ifelse(glm.probs > 0.5,"Up","Down")
+head(glm.pred)
+mean(glm.pred==Smarket$Direction) # for the true classification rate
+mean(glm.pred!=Smarket$Direction) # for the mis-classification rate
