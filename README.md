@@ -10,7 +10,7 @@ This is Yolanda's notebook for machine learning study. A practical self-study gu
 - use `cars` dataset that comes with R by default.
 - us `lm()` function to fit the model then use `summary()` function to get some detailed information
 - see example code for detail
-=======
+
 ## Logistic regression
 ### What is logistic regression
 - Logistic regression is a type of classification model for supervised machine learning.
