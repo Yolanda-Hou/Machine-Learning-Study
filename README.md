@@ -7,6 +7,7 @@
 - use the Smarket data set from the ISLR package as an example
 - fit the logistic regression model to predict Direction using Lag1,Lag2,Lag3,Lag4,Lag5, and Volume
 - NOTE: When fitting a logistic regression model using the glm() function, you need to specify family="binomial"
+- example code:
 `library(ISLR)`
 `data("Smarket")`
 `dim(Smarket)`
