@@ -6,11 +6,11 @@
 ### How to perform logistic regression in R
 - use the Smarket data set from the ISLR package as an example
 - fit the logistic regression model to predict Direction using Lag1,Lag2,Lag3,Lag4,Lag5, and Volume
-- ==NOTE==: When fitting a logistic regression model using the glm() function, you need to specify family="binomial"
-`library(ISLR)
-data("Smarket")
-dim(Smarket)
-head(Smarket)
-myfit <- glm(Direction ~ Lag1 + Lag2 + Lag3 + Lag4 + Lag5 + Volume, data = Smarket,
-family = "binomial")
-summary(myfit)`
+- NOTE: When fitting a logistic regression model using the glm() function, you need to specify family="binomial"
+`library(ISLR)`
+`data("Smarket")`
+`dim(Smarket)`
+`head(Smarket)`
+`myfit <- glm(Direction ~ Lag1 + Lag2 + Lag3 + Lag4 + Lag5 + Volume, data = Smarket,family = "binomial")`
+`summary(myfit)`
+`coef(myfit)`
