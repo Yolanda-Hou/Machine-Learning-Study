@@ -1,4 +1,3 @@
-# Machine-Learning-Study
 ## Logistic regression
 ### What is logistic regression
 - Logistic regression is a type of classification model for supervised machine learning.
@@ -8,3 +7,5 @@
 - fit the logistic regression model to predict Direction using Lag1,Lag2,Lag3,Lag4,Lag5, and Volume
 - NOTE: When fitting a logistic regression model using the glm() function, you need to specify family="binomial"
 - see detail in example code
+
+This is Yolanda's notebook for machine learning study. A practical self-study notebook to learn machine learning models and how to perform them in R.
